@@ -1,0 +1,9 @@
+<!-- abstract object that rails uses to build a form  -->
+<%= form_for @task do |f| %>
+	<%= f.label "Title:" %><br>
+	<%= f.text_field :title %><br>
+
+	<%= f.label "Details" %><br>
+	<%= f.text_area :details %><br>
+	<%= f.submit %>
+<% end %>

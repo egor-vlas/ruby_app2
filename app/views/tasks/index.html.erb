@@ -3,6 +3,15 @@
 
 <ul>
 	<% @tasks.each do |task| %>
-		<li><%= task %></li>
+		<li>
+
+			<P><strong><%= task.title %></strong></P>	
+			<p><em><%= task.details %></em></p>	
+			<%= link_to "Edit", edit_task_path(task) %>
+			<%= link_to "Delete", task_path(task),
+									method: :delete %>
+		</li>
 	<% end %>	
 </ul>
+
+<%= link_to 'New Task', new_task_path%>
