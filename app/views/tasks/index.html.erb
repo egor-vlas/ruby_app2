@@ -1,15 +1,11 @@
-<h1>Tasks#index</h1>
-<p>Tasks go here:</p>
+<h1>To Do:</h1>
+
 
 <ul>
 	<% @tasks.each do |task| %>
 		<li>
 
-			<P><strong><%= task.title %></strong></P>	
-			<p><em><%= task.details %></em></p>	
-			<%= link_to "Edit", edit_task_path(task) %>
-			<%= link_to "Delete", task_path(task),
-									method: :delete %>
+			<strong><%= link_to task.title, task_path(task) %></strong>				
 		</li>
 	<% end %>	
 </ul>
