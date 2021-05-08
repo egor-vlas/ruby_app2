@@ -5,7 +5,9 @@
 	<% @tasks.each do |task| %>
 		<li>
 
-			<strong><%= link_to task.title, task_path(task) %></strong>				
+			<strong><%= link_to task.title, task_path(task) %></strong>
+			<p>Completed: <%= task.completed %> </p>
+			<p><%= link_to "Toggle Completion", "/tasks/#{task.id}/complete/#{!task.completed}" %></p>	
 		</li>
 	<% end %>	
 </ul>
